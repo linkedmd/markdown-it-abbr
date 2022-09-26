@@ -113,6 +113,10 @@ module.exports = function sub_plugin(md) {
             nodes.push(token);
           }
 
+          token         = new state.Token('link_open', 'a', 1);
+          token.attrs = [['href', '#' + m[2]]];
+          nodes.push(token);
+
           token         = new state.Token('abbr_open', 'abbr', 1);
           token.attrs   = [ [ 'title', state.env.abbreviations[':' + m[2]] ] ];
           nodes.push(token);
@@ -122,6 +126,9 @@ module.exports = function sub_plugin(md) {
           nodes.push(token);
 
           token         = new state.Token('abbr_close', 'abbr', -1);
+          nodes.push(token);
+
+          token         = new state.Token('link_close', 'a', -1);
           nodes.push(token);
 
           reg.lastIndex -= m[3].length;
