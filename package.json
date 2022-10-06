@@ -1,5 +1,5 @@
 {
-  "name": "markdown-it-abbr",
+  "name": "@linkedmd/markdown-it-abbr",
   "version": "1.0.4",
   "description": "<abbr> tag for markdown-it markdown parser.",
   "keywords": [

@@ -31,8 +31,7 @@ browserify:
 		./node_modules/.bin/browserify ./ -s markdownitAbbr \
 		) > dist/markdown-it-abbr.js
 	# Minify
-	./node_modules/.bin/uglifyjs dist/markdown-it-abbr.js -b beautify=false,ascii-only=true -c -m \
-		--preamble "/*! ${NPM_PACKAGE} ${NPM_VERSION} ${GITHUB_PROJ} @license MIT */" \
+	./node_modules/.bin/uglifyjs dist/markdown-it-abbr.js 
 		> dist/markdown-it-abbr.min.js
 
 .PHONY: lint test coverage
